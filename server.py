@@ -68,6 +68,9 @@ class Handler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(data)
             return
+        # Brand kit gallery lives at /brand-kit
+        if self.path in ("/brand-kit", "/brand-kit/"):
+            self.path = "/brand-kit.html"
         return super().do_GET()
 
     def log_message(self, format, *args):
