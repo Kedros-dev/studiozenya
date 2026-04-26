@@ -1,0 +1,121 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 24px 0;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(244, 239, 232, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+  box-shadow: 0 4px 20px rgba(42, 33, 24, 0.05);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--espresso);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--tan-deep);
+}
+
+.logo {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  transition: height 0.4s ease;
+}
+
+.scrolled .logo img {
+  height: 40px;
+}
+
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--stone);
+}
+
+.langToggle button {
+  transition: color 0.3s ease;
+}
+
+.langToggle button:hover {
+  color: var(--espresso);
+}
+
+.langToggle button.active {
+  color: var(--espresso);
+  font-weight: 700;
+}
+
+.divider {
+  opacity: 0.5;
+}
+
+.bookBtn {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: var(--tan-deep);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .left {
+    display: none;
+  }
+  .langToggle {
+    display: none;
+  }
+  .right {
+    gap: 16px;
+  }
+}

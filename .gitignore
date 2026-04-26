@@ -1,6 +1,11 @@
-__pycache__/
-*.py[cod]
-*$py.class
-.cache/
-.pythonlibs/
-.upm/
+node_modules
+dist
+dist-ssr
+.cache
+.upm
+.pythonlibs
+*.local
+.DS_Store
+.env
+.env.local
+*.log
