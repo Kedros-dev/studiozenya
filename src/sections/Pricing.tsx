@@ -4,23 +4,33 @@ import styles from "./Pricing.module.css";
 export default function Pricing() {
   const packages = [
     {
-      title: "Drop-In",
+      title: "1 Session",
       price: "$25",
-      desc: "Perfect for visitors or those trying out our classes for the first time.",
-      features: ["Valid for any class", "Mat & props included", "Expires in 30 days"]
+      perSession: "$25 / session",
+      desc: "Perfect for visitors or those trying out Pilates for the first time.",
+      features: ["1-hour session", "Mat & props included", "Valid for any class"]
     },
     {
-      title: "5 Classes",
-      price: "$110",
-      desc: "A consistent start to your weekly wellness ritual.",
-      features: ["Valid for any class", "Priority booking", "Expires in 60 days"],
+      title: "4 Sessions",
+      price: "$80",
+      perSession: "$20 / session",
+      desc: "A great way to build a consistent rhythm and feel real progress.",
+      features: ["4 × 1-hour sessions", "Save $20 vs drop-in", "Valid for any class"]
+    },
+    {
+      title: "12 Sessions",
+      price: "$200",
+      perSession: "$17 / session",
+      desc: "Our most popular pack — committed practice with meaningful savings.",
+      features: ["12 × 1-hour sessions", "Save $100 vs drop-in", "Priority booking"],
       popular: true
     },
     {
-      title: "10 Classes",
-      price: "$200",
-      desc: "Deepen your practice and see real, lasting transformation.",
-      features: ["Valid for any class", "Priority booking", "1 free guest pass", "Expires in 90 days"]
+      title: "20 Sessions",
+      price: "$300",
+      perSession: "$15 / session",
+      desc: "Best value for dedicated practitioners ready to transform their body.",
+      features: ["20 × 1-hour sessions", "Save $200 vs drop-in", "Priority booking"]
     }
   ];
 
@@ -51,6 +61,7 @@ export default function Pricing() {
               <div className={styles.cardHeader}>
                 <h3 className={styles.pkgTitle}>{pkg.title}</h3>
                 <div className={styles.price}>{pkg.price}</div>
+                <div className={styles.perSession}>{pkg.perSession}</div>
               </div>
               <p className={styles.desc}>{pkg.desc}</p>
               <ul className={styles.features}>
