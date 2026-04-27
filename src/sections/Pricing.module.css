@@ -86,17 +86,24 @@
   transform: translateY(-12px);
 }
 
-.popular .pkgTitle,
-.popular .price {
+.popular .pkgTitle {
   color: var(--cream);
 }
 
+.popular .price {
+  color: var(--tan-light);
+}
+
 .popular .desc {
-  color: rgba(244, 239, 232, 0.78);
+  color: rgba(244, 239, 232, 0.92);
 }
 
 .popular .features {
-  color: rgba(244, 239, 232, 0.9);
+  color: var(--cream);
+}
+
+.popular .features li {
+  color: var(--cream);
 }
 
 .popular .features li svg {
@@ -138,16 +145,17 @@
   font-family: var(--font-display);
   font-size: 1.7rem;
   color: var(--espresso);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 
 .price {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 2.6rem;
   color: var(--tan-deep);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .popular .price {

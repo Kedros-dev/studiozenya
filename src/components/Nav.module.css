@@ -65,32 +65,6 @@
   height: 40px;
 }
 
-.langToggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--stone);
-}
-
-.langToggle button {
-  transition: color 0.3s ease;
-}
-
-.langToggle button:hover {
-  color: var(--espresso);
-}
-
-.langToggle button.active {
-  color: var(--espresso);
-  font-weight: 700;
-}
-
-.divider {
-  opacity: 0.5;
-}
-
 .bookBtn {
   background: var(--espresso);
   color: var(--cream);
@@ -112,7 +86,7 @@
   .left {
     display: none;
   }
-  .langToggle {
+  .right .link {
     display: none;
   }
   .right {

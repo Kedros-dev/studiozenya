@@ -1,29 +1,11 @@
 /* Brand fonts ------------------------------------------------------------- */
+/* Display: Fraunces (Google Fonts, loaded from index.html) — warm, readable serif */
+/* Body: Inter (Google Fonts, loaded from index.html) — clean, highly legible */
+/* Vonique 43 kept available as a wordmark-only accent if needed */
 @font-face {
   font-family: "Vonique 43";
   src: url("/assets/fonts/Vonique 43_D.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/GothamLight.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/GothamMedium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Bold.otf") format("opentype");
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -41,8 +23,9 @@
   --stone: #7a6f60;
   --ink: #1a140e;
 
-  --font-display: "Vonique 43", "Cormorant Garamond", Georgia, serif;
-  --font-body: "Gotham", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-wordmark: "Vonique 43", "Fraunces", Georgia, serif;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -71,10 +54,11 @@ body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--espresso);
-  font-weight: 300;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 img {
   max-width: 100%;

@@ -12,21 +12,20 @@ A modern, fully-branded marketing website for **Studio Zenya**, a boutique Pilat
 - Autoscale deployment: `npm run build` → `npm run start` (vite preview)
 
 ## Page Sections (in order)
-1. **Hero** — full-bleed studio photo with the Vonique 43 wordmark headline and dual CTAs
+1. **Hero** — full-bleed studio photo with the Fraunces serif headline and dual CTAs
 2. **About** — studio story with floating stats and brand pattern accents
-3. **Classes** — Flow & Glow / Tough & Strong / Booty Zone cards
+3. **Classes** — Flow & Glow / Tough & Strong / Booty Zone cards with pill-style WhatsApp CTAs
 4. **Pricing** — three transparent membership packages, all routing to WhatsApp
 5. **Gallery** — curated grid of real studio photography
 6. **Testimonials** — rotating Lebanese client quotes
-7. **Instagram Feed** — six-tile @studiozenya grid linking out to IG
-8. **FAQ** — accordion of common pre-trial questions
-9. **Visit / Reserve** — replaces the old email form: WhatsApp + phone CTAs, opening hours, embedded Google Map of Mkalles
+7. **FAQ** — accordion of common pre-trial questions
+8. **Visit / Reserve** — replaces the old email form: WhatsApp + phone CTAs, opening hours, embedded Google Map of Mkalles
 
-Plus: sticky **Nav** with circular logo and EN/AR/FR language toggle stub, **Footer**, and a floating **WhatsApp FAB** always in the bottom-right.
+Plus: sticky **Nav** with circular logo and Studio / Classes / Pricing / FAQ links, **Footer**, and a floating **WhatsApp FAB** always in the bottom-right.
 
 ## Brand System
 - **Palette:** Espresso `#2A2118`, Tan `#B9956B`, Tan-Light `#D4B890`, Tan-Deep `#9A774F`, Sand `#ECE4D6`, Cream `#F4EFE8`, Stone `#7A6F60` — exposed as CSS variables in `src/styles/index.css`
-- **Typography:** Vonique 43 (display, italic accents) + Gotham 300/500/700 (body), self-hosted via `@font-face`
+- **Typography:** Fraunces (display, warm humanist serif with elegant italics) + Inter (body, clean and highly legible) — both via Google Fonts. Vonique 43 retained as a wordmark accent (`--font-wordmark`). The original Vonique was swapped because it lacked common glyphs (incl. `$`) and was hard to read at body sizes.
 - **Patterns:** `/public/assets/patterns/Pattern-01..06.{png,jpg}` used as low-opacity section textures
 - **Photography:** Real studio photos in `/public/assets/studio-photos/photo-*.jpg`, extracted from the original Instagram-post Canva templates
 

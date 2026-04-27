@@ -99,12 +99,23 @@
 }
 
 .bookLink {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--espresso);
-  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  transition: background 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .bookLink:hover {
-  color: var(--tan-deep);
+  background: var(--tan-deep);
+  transform: translateY(-2px);
 }
