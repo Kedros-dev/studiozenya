@@ -85,23 +85,29 @@
 
 .meta {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
   border-top: 1px solid rgba(185, 149, 107, 0.2);
-  padding-top: 24px;
+  padding-top: 20px;
+  margin-top: auto;
 }
 
 .level {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: var(--stone);
+  text-align: center;
 }
 
 .bookLink {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
   background: var(--espresso);
   color: var(--cream);
   font-family: var(--font-body);
@@ -109,7 +115,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 10px 18px;
+  padding: 14px 18px;
   border-radius: var(--radius-pill);
   transition: background 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
