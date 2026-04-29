@@ -1,26 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Banner.module.css";
 
 export default function Banner() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const close = () => setOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${scrolled ? styles.wrapperScrolled : ""}`}>
       <div className={styles.banner}>
         <div className={styles.logoArea}>
           <a href="#" className={styles.logoLink} aria-label="Studio Zenya home">
             <img
               src="/assets/logos/zenya-wordmark.png"
               alt="Studio Zenya"
-              className={styles.wordmark}
+              className={`${styles.wordmark} ${scrolled ? styles.wordmarkScrolled : ""}`}
             />
           </a>
         </div>
 
         <button
-          className={styles.hamburger}
+          className={`${styles.hamburger} ${scrolled ? styles.hamburgerScrolled : ""}`}
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle navigation"
           aria-expanded={open}
@@ -40,7 +47,6 @@ export default function Banner() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
           >
-            <a href="#about" className={styles.dropLink} onClick={close}>Studio</a>
             <a href="#classes" className={styles.dropLink} onClick={close}>Classes</a>
             <a href="#pricing" className={styles.dropLink} onClick={close}>Pricing</a>
             <a href="#faq" className={styles.dropLink} onClick={close}>FAQ</a>

@@ -1,26 +1,31 @@
 .wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
   width: 100%;
+  z-index: 100;
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.wrapperScrolled {
+  background: rgba(200, 166, 132, 0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 12px rgba(42, 33, 24, 0.1);
 }
 
 .banner {
-  width: 100%;
-  background: #c8a684;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 36px;
+  padding: 18px 36px;
   position: relative;
-  box-shadow: 0 2px 12px rgba(42, 33, 24, 0.08);
 }
 
-/* ── Logo + Arches ─────────────────────────────────────── */
+/* ── Logo ───────────────────────────────────────────────── */
 .logoArea {
   display: flex;
   align-items: center;
-  gap: 14px;
 }
 
 .logoLink {
@@ -37,25 +42,18 @@
   display: block;
   height: auto;
   width: 100%;
-  max-width: 220px;
+  max-width: 200px;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+  transition: filter 0.4s ease;
+}
+
+.wordmarkScrolled {
   filter:
     drop-shadow(0 3px 7px rgba(42, 33, 24, 0.32))
     drop-shadow(0 1px 3px rgba(42, 33, 24, 0.22));
 }
 
-.arch {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: screen;
-  opacity: 0.9;
-}
-
-.archLeft {
-  transform: scaleX(-1);
-}
-
-/* ── Hamburger button ──────────────────────────────────── */
+/* ── Hamburger ──────────────────────────────────────────── */
 .hamburger {
   position: absolute;
   right: 28px;
@@ -74,10 +72,14 @@
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--espresso);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.4s ease;
   transform-origin: center;
+}
+
+.hamburgerScrolled .bar {
+  background: var(--espresso);
 }
 
 .bar1Open {
@@ -93,10 +95,11 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── Dropdown ──────────────────────────────────────────── */
+/* ── Dropdown ───────────────────────────────────────────── */
 .dropdown {
-  background: #c8a684;
-  border-top: 1px solid rgba(42, 33, 24, 0.12);
+  background: rgba(200, 166, 132, 0.97);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(42, 33, 24, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,11 +142,8 @@
 }
 
 @media (max-width: 600px) {
-  .arch {
-    height: 38px;
-  }
   .wordmark {
-    max-width: 160px;
+    max-width: 150px;
   }
   .hamburger {
     right: 16px;
