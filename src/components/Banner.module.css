@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 24px;
+  padding: 48px 24px 52px;
 }
 
 .logoLink {
@@ -14,24 +14,27 @@
 }
 
 .logoLink:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-.logo {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 50%;
+.wordmark {
   display: block;
-  box-shadow: 0 8px 24px rgba(42, 33, 24, 0.12);
+  height: auto;
+  width: 100%;
+  max-width: 460px;
+  filter:
+    drop-shadow(0 4px 10px rgba(42, 33, 24, 0.35))
+    drop-shadow(0 2px 4px rgba(42, 33, 24, 0.25));
 }
 
 @media (max-width: 768px) {
   .banner {
-    padding: 20px 16px;
+    padding: 30px 18px 34px;
   }
-  .logo {
-    width: 96px;
-    height: 96px;
+  .wordmark {
+    max-width: 280px;
+    filter:
+      drop-shadow(0 3px 6px rgba(42, 33, 24, 0.32))
+      drop-shadow(0 1px 3px rgba(42, 33, 24, 0.22));
   }
 }
