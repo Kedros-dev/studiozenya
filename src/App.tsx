@@ -1,3 +1,4 @@
+import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
@@ -13,6 +14,7 @@ import Visit from "./sections/Visit";
 export default function App() {
   return (
     <div style={{ position: "relative", overflowX: "hidden" }}>
+      <Banner />
       <Nav />
       <main>
         <Hero />

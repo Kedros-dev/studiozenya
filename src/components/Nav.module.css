@@ -1,12 +1,14 @@
 .nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 24px 0;
+  padding: 18px 0;
   transition: all 0.4s ease;
-  background: transparent;
+  background: rgba(244, 239, 232, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(185, 149, 107, 0.18);
 }
 
 .scrolled {
@@ -23,17 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
-.left, .right {
+.links {
   display: flex;
   align-items: center;
-  gap: 32px;
-  flex: 1;
-}
-
-.right {
-  justify-content: flex-end;
+  gap: 36px;
 }
 
 .link {
@@ -48,21 +46,6 @@
 
 .link:hover {
   color: var(--tan-deep);
-}
-
-.logo {
-  display: block;
-  flex: 0 0 auto;
-}
-
-.logo img {
-  height: 48px;
-  width: auto;
-  transition: height 0.4s ease;
-}
-
-.scrolled .logo img {
-  height: 40px;
 }
 
 .bookBtn {
@@ -83,13 +66,17 @@
 }
 
 @media (max-width: 768px) {
-  .left {
+  .links {
+    gap: 18px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .links::-webkit-scrollbar {
     display: none;
   }
-  .right .link {
-    display: none;
-  }
-  .right {
-    gap: 16px;
+  .link {
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 }

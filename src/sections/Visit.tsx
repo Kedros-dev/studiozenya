@@ -3,7 +3,7 @@ import styles from "./Visit.module.css";
 
 export default function Visit() {
   return (
-    <section className={styles.visit}>
+    <section id="visit" className={styles.visit}>
       <div className={styles.container}>
         <div className={styles.content}>
           <motion.div 

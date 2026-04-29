@@ -1,0 +1,37 @@
+.banner {
+  width: 100%;
+  background: #c8a684;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+}
+
+.logoLink {
+  display: inline-block;
+  line-height: 0;
+  transition: transform 0.4s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.03);
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 8px 24px rgba(42, 33, 24, 0.12);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 20px 16px;
+  }
+  .logo {
+    width: 96px;
+    height: 96px;
+  }
+}
