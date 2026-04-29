@@ -50,11 +50,28 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-direction: row;
   gap: 24px;
-  max-width: 1240px;
-  margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(185, 149, 107, 0.3) transparent;
+}
+
+.grid::-webkit-scrollbar {
+  height: 4px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: rgba(185, 149, 107, 0.35);
+  border-radius: 4px;
 }
 
 .card {
@@ -67,6 +84,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  scroll-snap-align: start;
 }
 
 .card:hover {
