@@ -9,9 +9,9 @@
 }
 
 .wrapperScrolled {
-  background: rgba(200, 166, 132, 0.96);
+  background: rgba(200, 166, 132, 0.45);
   backdrop-filter: blur(12px);
-  box-shadow: 0 2px 12px rgba(42, 33, 24, 0.1);
+  box-shadow: 0 2px 12px rgba(42, 33, 24, 0.06);
 }
 
 .banner {
