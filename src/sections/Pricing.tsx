@@ -68,15 +68,11 @@ export default function Pricing() {
           <p className={styles.subtitle}>Transparent packages with no hidden fees. Choose the commitment that feels right for you.</p>
         </motion.div>
 
-        <div className={styles.grid}>
-          {packages.map((pkg, i) => (
-            <motion.div
+        <div className={styles.carouselWrapper}><div className={styles.track}>
+          {[...packages, ...packages].map((pkg, i) => (
+            <div
               key={i}
               className={`${styles.card} ${pkg.popular ? styles.popular : ""}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
             >
               {pkg.popular && <div className={styles.badge}>Most Popular</div>}
               <div className={styles.cardHeader}>
@@ -98,9 +94,9 @@ export default function Pricing() {
               <a href={`https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20purchase%20the%20${encodeURIComponent(pkg.title)}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
                 Purchase via WhatsApp
               </a>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </div></div>
       </div>
     </section>
   );
