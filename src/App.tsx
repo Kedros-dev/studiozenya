@@ -2,7 +2,6 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
 import Hero from "./sections/Hero";
-import About from "./sections/About";
 import Classes from "./sections/Classes";
 import Pricing from "./sections/Pricing";
 import Gallery from "./sections/Gallery";
@@ -16,7 +15,6 @@ export default function App() {
       <Banner />
       <main>
         <Hero />
-        <About />
         <Classes />
         <Pricing />
         <Gallery />
