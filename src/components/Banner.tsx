@@ -12,7 +12,7 @@ export default function Banner() {
         <div className={styles.logoArea}>
           <a href="#" className={styles.logoLink} aria-label="Studio Zenya home">
             <img
-              src="/assets/logos/zenya-circle-logo.jpg"
+              src="/assets/logos/zenya-wordmark.png"
               alt="Studio Zenya"
               className={styles.wordmark}
             />
