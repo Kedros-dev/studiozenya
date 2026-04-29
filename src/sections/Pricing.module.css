@@ -15,7 +15,7 @@
 }
 
 .container {
-  max-width: 860px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
@@ -24,7 +24,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 .title {
@@ -43,133 +43,210 @@
 
 .subtitle {
   color: var(--stone);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
-/* ── Table layout ─────────────────────────────────────── */
-.tables {
+.card {
+  background: var(--cream);
+  padding: 40px 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(185, 149, 107, 0.18);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  position: relative;
 }
 
-.tableBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(185, 149, 107, 0.4);
 }
 
-.tableLabel {
+.popular {
+  background: var(--espresso);
+  color: var(--cream);
+  border-color: var(--espresso);
+  transform: translateY(-8px);
+}
+
+.popular:hover {
+  transform: translateY(-12px);
+}
+
+.popular .pkgTitle {
+  color: var(--cream);
+}
+
+.popular .price {
+  color: var(--tan-light);
+}
+
+.popular .desc {
+  color: rgba(244, 239, 232, 0.92);
+}
+
+.popular .features {
+  color: var(--cream);
+}
+
+.popular .features li {
+  color: var(--cream);
+}
+
+.popular .features li svg {
+  color: var(--tan-light);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tan);
+  color: var(--espresso);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--tan-deep);
-  margin-bottom: 12px;
-  padding-left: 4px;
-}
-
-.table {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid rgba(185, 149, 107, 0.2);
-  box-shadow: var(--shadow-sm);
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 28px;
-  background: var(--cream);
-  border-bottom: 1px solid rgba(185, 149, 107, 0.12);
-  transition: background 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-.row:last-child {
-  border-bottom: none;
-}
-
-.row:hover {
-  background: rgba(185, 149, 107, 0.06);
-}
-
-.rowTitle {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--espresso);
-}
-
-.rowPrice {
-  font-family: var(--font-body);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--tan-deep);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
   white-space: nowrap;
-  min-width: 60px;
-  text-align: right;
+  box-shadow: 0 6px 16px rgba(185, 149, 107, 0.3);
 }
 
-.rowValidity {
-  font-size: 0.8rem;
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(185, 149, 107, 0.2);
+}
+
+.popular .cardHeader {
+  border-bottom-color: rgba(212, 184, 144, 0.2);
+}
+
+.pkgTitle {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--espresso);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 2.6rem;
+  color: var(--tan-deep);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.perSession {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--stone);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  min-width: 140px;
-  text-align: right;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
 }
 
-/* ── Footer CTA ───────────────────────────────────────── */
-.cta {
-  text-align: center;
-  margin-top: 48px;
-  font-size: 0.95rem;
+.popular .perSession {
+  color: rgba(244, 239, 232, 0.75);
+}
+
+.popular .price {
+  color: var(--tan-light);
+}
+
+.desc {
   color: var(--stone);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
-.cta a {
-  color: var(--tan-deep);
-  font-weight: 600;
-  transition: color 0.2s ease;
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
 
-.cta a:hover {
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
   color: var(--espresso);
 }
 
-@media (max-width: 600px) {
+.features li svg {
+  color: var(--tan-deep);
+  flex-shrink: 0;
+}
+
+.buyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.buyBtn:hover {
+  background: var(--tan-deep);
+  transform: translateY(-2px);
+}
+
+.popular .buyBtn {
+  background: var(--tan);
+  color: var(--espresso);
+}
+
+.popular .buyBtn:hover {
+  background: var(--tan-light);
+}
+
+@media (max-width: 768px) {
   .pricing {
     padding: 80px 0;
   }
-  .row {
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 4px 12px;
-    padding: 16px 20px;
+  .header {
+    margin-bottom: 56px;
   }
-  .rowTitle {
-    grid-column: 1;
-    grid-row: 1;
+  .popular {
+    transform: translateY(0);
   }
-  .rowPrice {
-    grid-column: 2;
-    grid-row: 1;
-    font-size: 1.1rem;
-  }
-  .rowValidity {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    text-align: left;
-    min-width: unset;
+  .popular:hover {
+    transform: translateY(-6px);
   }
 }
