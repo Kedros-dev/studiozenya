@@ -6,7 +6,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.bgWrapper}>
         <motion.img 
-          src="/assets/studio-photos/photo-2.jpg" 
+          src="/assets/studio-photos/studio-zenya-interior.jpeg" 
           alt="Studio Zenya"
           className={styles.bgImage}
           initial={{ scale: 1.1 }}

@@ -10,7 +10,6 @@ export default function Banner() {
     <div className={styles.wrapper}>
       <div className={styles.banner}>
         <div className={styles.logoArea}>
-          <img src="/assets/arch.png" alt="" className={`${styles.arch} ${styles.archLeft}`} aria-hidden="true" />
           <a href="#" className={styles.logoLink} aria-label="Studio Zenya home">
             <img
               src="/assets/logos/zenya-wordmark.png"
@@ -18,7 +17,6 @@ export default function Banner() {
               className={styles.wordmark}
             />
           </a>
-          <img src="/assets/arch.png" alt="" className={`${styles.arch} ${styles.archRight}`} aria-hidden="true" />
         </div>
 
         <button
