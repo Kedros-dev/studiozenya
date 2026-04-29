@@ -4,7 +4,7 @@ import styles from "./WhatsAppFAB.module.css";
 export default function WhatsAppFAB() {
   return (
     <motion.a
-      href="https://wa.me/96171511101"
+      href="https://wa.me/96179077076"
       target="_blank"
       rel="noreferrer"
       className={styles.fab}

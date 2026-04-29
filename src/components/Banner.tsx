@@ -52,7 +52,7 @@ export default function Banner() {
             <a href="#faq" className={styles.dropLink} onClick={close}>FAQ</a>
             <a href="#visit" className={styles.dropLink} onClick={close}>Visit</a>
             <a
-              href="https://wa.me/96171511101"
+              href="https://wa.me/96179077076"
               target="_blank"
               rel="noreferrer"
               className={`${styles.dropLink} ${styles.reserveBtn}`}

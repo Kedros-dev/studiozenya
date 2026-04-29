@@ -33,7 +33,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <a href="https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noreferrer" className={styles.primaryBtn}>
+          <a href="https://wa.me/96179077076?text=Hi!%20I'd%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noreferrer" className={styles.primaryBtn}>
             Book a Free Trial
           </a>
           <a href="#classes" className={styles.secondaryBtn}>

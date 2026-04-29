@@ -27,7 +27,7 @@ export default function Visit() {
             </div>
 
             <div className={styles.actions}>
-              <a href="https://wa.me/96171511101" target="_blank" rel="noreferrer" className={styles.waBtn}>
+              <a href="https://wa.me/96179077076" target="_blank" rel="noreferrer" className={styles.waBtn}>
                 Message on WhatsApp
               </a>
               <a href="tel:+96179077076" className={styles.phoneBtn}>

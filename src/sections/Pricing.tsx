@@ -91,7 +91,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href={`https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20purchase%20the%20${encodeURIComponent(pkg.title)}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
+              <a href={`https://wa.me/96179077076?text=Hi!%20I'd%20like%20to%20purchase%20the%20${encodeURIComponent(pkg.title)}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
                 Purchase via WhatsApp
               </a>
             </div>

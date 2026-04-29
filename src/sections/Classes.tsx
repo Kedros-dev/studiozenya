@@ -33,7 +33,7 @@ export default function Classes() {
               <p className={styles.desc}>{c.description}</p>
               <div className={styles.meta}>
                 <span className={styles.level}>{c.level}</span>
-                <a href={`https://wa.me/96171511101?text=Hi!%20I'm%20interested%20in%20the%20${c.title}%20class.`} target="_blank" rel="noreferrer" className={styles.bookLink}>
+                <a href={`https://wa.me/96179077076?text=Hi!%20I'm%20interested%20in%20the%20${c.title}%20class.`} target="_blank" rel="noreferrer" className={styles.bookLink}>
                   Book via WhatsApp &rarr;
                 </a>
               </div>
