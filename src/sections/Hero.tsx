@@ -26,21 +26,12 @@ export default function Hero() {
           Move with <em>intention</em>.<br />
           Live with balance.
         </motion.h1>
-        
-        <motion.p 
-          className={styles.subtitle}
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          A warm, female-led Pilates space in Mkalles where every body discovers strength and confidence.
-        </motion.p>
 
         <motion.div 
           className={styles.actions}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a href="https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noreferrer" className={styles.primaryBtn}>
             Book a Free Trial
@@ -49,6 +40,15 @@ export default function Hero() {
             Explore Classes
           </a>
         </motion.div>
+
+        <motion.p 
+          className={styles.subtitle}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          A warm, female-led Pilates space in Mkalles where every body discovers strength and confidence.
+        </motion.p>
       </div>
     </section>
   );

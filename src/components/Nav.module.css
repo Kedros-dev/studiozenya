@@ -4,79 +4,139 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 18px 0;
-  transition: all 0.4s ease;
   background: rgba(244, 239, 232, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(185, 149, 107, 0.18);
+  transition: all 0.4s ease;
 }
 
 .scrolled {
-  background: rgba(244, 239, 232, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 16px 0;
+  background: rgba(244, 239, 232, 0.98);
   box-shadow: 0 4px 20px rgba(42, 33, 24, 0.05);
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-
-.link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--espresso);
+  justify-content: center;
   position: relative;
-  transition: color 0.3s ease;
 }
 
-.link:hover {
-  color: var(--tan-deep);
+/* ── Logo area ─────────────────────────────────────────── */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.bookBtn {
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.archImg {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.archLeft {
+  transform: scaleX(-1);
+}
+
+.archRight {
+  /* default orientation */
+}
+
+/* ── Hamburger button ──────────────────────────────────── */
+.hamburger {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 101;
+}
+
+.bar {
+  display: block;
+  width: 26px;
+  height: 2px;
   background: var(--espresso);
-  color: var(--cream);
-  padding: 10px 24px;
-  border-radius: var(--radius-pill);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.bar1Open {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.bar2Open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.bar3Open {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Dropdown menu ─────────────────────────────────────── */
+.dropdown {
+  background: rgba(244, 239, 232, 0.98);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(185, 149, 107, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 24px;
+  gap: 4px;
+}
+
+.dropLink {
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
+  letter-spacing: 0.12em;
+  color: var(--espresso);
+  padding: 10px 24px;
+  width: 100%;
+  text-align: center;
+  transition: color 0.25s ease, background 0.25s ease;
 }
 
-.bookBtn:hover {
-  background: var(--tan-deep);
-  transform: translateY(-2px);
+.dropLink:hover {
+  color: var(--tan-deep);
+  background: rgba(185, 149, 107, 0.06);
 }
 
-@media (max-width: 768px) {
-  .links {
-    gap: 18px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .links::-webkit-scrollbar {
-    display: none;
-  }
-  .link {
-    font-size: 0.78rem;
-    white-space: nowrap;
-  }
+.dropReserve {
+  margin-top: 8px;
+  background: var(--espresso);
+  color: var(--cream) !important;
+  border-radius: var(--radius-pill);
+  width: auto;
+  min-width: 160px;
+  padding: 12px 32px;
+}
+
+.dropReserve:hover {
+  background: var(--tan-deep) !important;
+  color: var(--cream) !important;
 }

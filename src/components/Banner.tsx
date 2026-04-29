@@ -1,34 +1,64 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Banner.module.css";
 
 export default function Banner() {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
-    <div className={styles.banner}>
-      <nav className={styles.leftNav}>
-        <a href="#about" className={styles.link}>Studio</a>
-        <a href="#classes" className={styles.link}>Classes</a>
-        <a href="#pricing" className={styles.link}>Pricing</a>
-      </nav>
+    <div className={styles.wrapper}>
+      <div className={styles.banner}>
+        <div className={styles.logoArea}>
+          <img src="/assets/arch.png" alt="" className={`${styles.arch} ${styles.archLeft}`} aria-hidden="true" />
+          <a href="#" className={styles.logoLink} aria-label="Studio Zenya home">
+            <img
+              src="/assets/logos/zenya-wordmark.png"
+              alt="Studio Zenya"
+              className={styles.wordmark}
+            />
+          </a>
+          <img src="/assets/arch.png" alt="" className={`${styles.arch} ${styles.archRight}`} aria-hidden="true" />
+        </div>
 
-      <a href="#" className={styles.logoLink} aria-label="Studio Zenya home">
-        <img
-          src="/assets/logos/zenya-wordmark.png"
-          alt="Studio Zenya"
-          className={styles.wordmark}
-        />
-      </a>
-
-      <nav className={styles.rightNav}>
-        <a href="#faq" className={styles.link}>FAQ</a>
-        <a href="#visit" className={styles.link}>Visit</a>
-        <a
-          href="https://wa.me/96171511101"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.bookBtn}
+        <button
+          className={styles.hamburger}
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
         >
-          Reserve
-        </a>
-      </nav>
+          <span className={`${styles.bar} ${open ? styles.bar1Open : ""}`} />
+          <span className={`${styles.bar} ${open ? styles.bar2Open : ""}`} />
+          <span className={`${styles.bar} ${open ? styles.bar3Open : ""}`} />
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            className={styles.dropdown}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
+            <a href="#about" className={styles.dropLink} onClick={close}>Studio</a>
+            <a href="#classes" className={styles.dropLink} onClick={close}>Classes</a>
+            <a href="#pricing" className={styles.dropLink} onClick={close}>Pricing</a>
+            <a href="#faq" className={styles.dropLink} onClick={close}>FAQ</a>
+            <a href="#visit" className={styles.dropLink} onClick={close}>Visit</a>
+            <a
+              href="https://wa.me/96171511101"
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.dropLink} ${styles.reserveBtn}`}
+              onClick={close}
+            >
+              Reserve
+            </a>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,44 +1,26 @@
-.banner {
-  width: 100%;
-  background: #c8a684;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 32px;
-  padding: 16px 36px;
+.wrapper {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  background: #c8a684;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  position: relative;
   box-shadow: 0 2px 12px rgba(42, 33, 24, 0.08);
 }
 
-.leftNav {
+/* ── Logo + Arches ─────────────────────────────────────── */
+.logoArea {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
-}
-
-.rightNav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 28px;
-}
-
-.link {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--espresso);
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-
-.link:hover {
-  color: var(--cream);
+  gap: 14px;
 }
 
 .logoLink {
@@ -55,50 +37,115 @@
   display: block;
   height: auto;
   width: 100%;
-  max-width: 240px;
+  max-width: 220px;
   filter:
     drop-shadow(0 3px 7px rgba(42, 33, 24, 0.32))
     drop-shadow(0 1px 3px rgba(42, 33, 24, 0.22));
 }
 
-.bookBtn {
+.arch {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.archLeft {
+  transform: scaleX(-1);
+}
+
+/* ── Hamburger button ──────────────────────────────────── */
+.hamburger {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  display: block;
+  width: 26px;
+  height: 2px;
   background: var(--espresso);
-  color: var(--cream);
-  padding: 10px 22px;
-  border-radius: var(--radius-pill);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.bar1Open {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.bar2Open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.bar3Open {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Dropdown ──────────────────────────────────────────── */
+.dropdown {
+  background: #c8a684;
+  border-top: 1px solid rgba(42, 33, 24, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 0 22px;
+  gap: 2px;
+  box-shadow: 0 8px 24px rgba(42, 33, 24, 0.1);
+}
+
+.dropLink {
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: background 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
+  color: var(--espresso);
+  padding: 10px 32px;
+  width: 100%;
+  text-align: center;
+  transition: color 0.25s ease, background 0.25s ease;
 }
 
-.bookBtn:hover {
-  background: var(--ink);
-  transform: translateY(-2px);
+.dropLink:hover {
+  color: var(--cream);
+  background: rgba(42, 33, 24, 0.08);
 }
 
-@media (max-width: 900px) {
-  .banner {
-    grid-template-columns: auto 1fr auto;
-    padding: 12px 18px;
-    gap: 12px;
-  }
-  .leftNav {
-    display: none;
-  }
-  .rightNav {
-    gap: 14px;
-  }
-  .rightNav .link {
-    display: none;
+.reserveBtn {
+  margin-top: 10px;
+  background: var(--espresso);
+  color: var(--cream) !important;
+  border-radius: var(--radius-pill);
+  width: auto;
+  min-width: 160px;
+  padding: 12px 32px;
+}
+
+.reserveBtn:hover {
+  background: var(--ink) !important;
+  color: var(--cream) !important;
+}
+
+@media (max-width: 600px) {
+  .arch {
+    height: 38px;
   }
   .wordmark {
-    max-width: 170px;
-    filter:
-      drop-shadow(0 2px 5px rgba(42, 33, 24, 0.3))
-      drop-shadow(0 1px 2px rgba(42, 33, 24, 0.2));
+    max-width: 160px;
+  }
+  .hamburger {
+    right: 16px;
   }
 }
