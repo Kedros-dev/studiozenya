@@ -35,12 +35,10 @@
 
 .wordmark {
   display: block;
-  height: auto;
-  width: 100%;
-  max-width: 220px;
-  filter:
-    drop-shadow(0 3px 7px rgba(42, 33, 24, 0.32))
-    drop-shadow(0 1px 3px rgba(42, 33, 24, 0.22));
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .arch {
