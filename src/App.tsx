@@ -5,7 +5,6 @@ import Hero from "./sections/Hero";
 import Classes from "./sections/Classes";
 import Pricing from "./sections/Pricing";
 import Gallery from "./sections/Gallery";
-import Testimonials from "./sections/Testimonials";
 import FAQ from "./sections/FAQ";
 import Visit from "./sections/Visit";
 
@@ -18,7 +17,6 @@ export default function App() {
         <Classes />
         <Pricing />
         <Gallery />
-        <Testimonials />
         <FAQ />
         <Visit />
       </main>
