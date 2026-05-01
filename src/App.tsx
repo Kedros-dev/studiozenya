@@ -4,7 +4,6 @@ import WhatsAppFAB from "./components/WhatsAppFAB";
 import Hero from "./sections/Hero";
 import Classes from "./sections/Classes";
 import Pricing from "./sections/Pricing";
-import Gallery from "./sections/Gallery";
 import FAQContact from "./sections/FAQContact";
 
 export default function App() {
@@ -15,7 +14,6 @@ export default function App() {
         <Hero />
         <Classes />
         <Pricing />
-        <Gallery />
         <FAQContact />
       </main>
       <Footer />
