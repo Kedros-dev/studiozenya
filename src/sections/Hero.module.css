@@ -15,13 +15,15 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  background: var(--espresso);
 }
 
 .bgImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
+  background: var(--espresso);
 }
 
 .overlay {
