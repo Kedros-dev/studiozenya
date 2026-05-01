@@ -3,10 +3,11 @@ import styles from "./Gallery.module.css";
 
 export default function Gallery() {
   const photos = [
-    "/assets/studio-photos/photo-4-1.jpg",
-    "/assets/studio-photos/photo-5-1.jpg",
-    "/assets/studio-photos/photo-3.jpg",
-    "/assets/studio-photos/photo-4-2.jpg",
+    "/assets/studio-photos/1.jpeg",
+    "/assets/studio-photos/2.jpeg",
+    "/assets/studio-photos/3.jpeg",
+    "/assets/studio-photos/4.jpeg",
+    "/assets/studio-photos/5.jpeg",
   ];
 
   return (

@@ -1,23 +1,59 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Hero.module.css";
 
+const slides = [
+  "/assets/studio-photos/studio pic.jpeg",
+  "/assets/studio-photos/studio-zenya-interior.jpeg",
+  "/assets/studio-photos/1.jpeg",
+  "/assets/studio-photos/2.jpeg",
+  "/assets/studio-photos/3.jpeg",
+  "/assets/studio-photos/4.jpeg",
+  "/assets/studio-photos/5.jpeg",
+];
+
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className={styles.hero}>
       <div className={styles.bgWrapper}>
-        <motion.img 
-          src="/assets/studio-photos/studio-zenya-interior.jpeg" 
-          alt="Studio Zenya"
-          className={styles.bgImage}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={current}
+            src={slides[current]}
+            alt="Studio Zenya"
+            className={styles.bgImage}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
         <div className={styles.overlay} />
       </div>
 
+      {/* Dot indicators */}
+      <div className={styles.dots}>
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            className={`${styles.dot} ${i === current ? styles.dotActive : ""}`}
+            onClick={() => setCurrent(i)}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+
       <div className={styles.content}>
-        <motion.h1 
+        <motion.h1
           className={styles.title}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -27,7 +63,7 @@ export default function Hero() {
           Live with balance.
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className={styles.actions}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -41,7 +77,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           className={styles.subtitle}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
