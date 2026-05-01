@@ -40,6 +40,24 @@ export default function Classes() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className={styles.stats}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <div className={styles.stat}>
+            <span className={styles.statNum}>Intimate</span>
+            <span className={styles.statLabel}>Small Class Sizes</span>
+          </div>
+          <div className={styles.statDivider} />
+          <div className={styles.stat}>
+            <span className={styles.statNum}>Expert</span>
+            <span className={styles.statLabel}>Female-Led Coaching</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -6,38 +6,59 @@ export default function Pricing() {
     {
       title: "1 Session",
       price: "$25",
-      perSession: "$25 / session",
-      desc: "Perfect for visitors or those trying out Pilates for the first time.",
-      features: ["1-hour session", "Mat & props included", "Valid for any class"]
+      validity: "1 time",
+      desc: "Perfect for first-timers or visitors dropping in.",
+      features: ["1 × 50-min session", "Any group class", "Mat & props included"]
     },
     {
       title: "4 Sessions",
       price: "$80",
-      perSession: "$20 / session",
-      desc: "A great way to build a consistent rhythm and feel real progress.",
-      features: ["4 × 1-hour sessions", "Save $20 vs drop-in", "Valid for any class"]
+      validity: "1 month validity",
+      desc: "A great way to build a consistent rhythm.",
+      features: ["4 × 50-min sessions", "Any group class", "1 month to use"]
+    },
+    {
+      title: "8 Sessions",
+      price: "$150",
+      validity: "1 month validity",
+      desc: "Feel real progress with a committed practice.",
+      features: ["8 × 50-min sessions", "Any group class", "1 month to use"]
     },
     {
       title: "12 Sessions",
       price: "$200",
-      perSession: "$17 / session",
-      desc: "Our most popular pack — committed practice with meaningful savings.",
-      features: ["12 × 1-hour sessions", "Save $100 vs drop-in", "Priority booking"],
+      validity: "2 months",
+      desc: "Our most popular pack — meaningful savings and results.",
+      features: ["12 × 50-min sessions", "Any group class", "2 months to use"],
       popular: true
     },
     {
-      title: "20 Sessions",
-      price: "$300",
-      perSession: "$15 / session",
-      desc: "Best value for dedicated practitioners ready to transform their body.",
-      features: ["20 × 1-hour sessions", "Save $200 vs drop-in", "Priority booking"]
+      title: "Unlimited",
+      price: "$200",
+      validity: "1 month validity",
+      desc: "Train as often as you like for a full month.",
+      features: ["Unlimited sessions", "Any group class", "1 month to use"]
+    },
+    {
+      title: "Private Solo",
+      price: "$55",
+      validity: "per session",
+      desc: "One-on-one attention tailored entirely to you.",
+      features: ["1 private session", "Personalised programme", "Expert coaching"]
+    },
+    {
+      title: "Private Duo",
+      price: "$65",
+      validity: "per session",
+      desc: "Train together — perfect for partners or friends.",
+      features: ["1 private session for 2", "Shared personalised plan", "Expert coaching"]
     }
   ];
 
   return (
     <section id="pricing" className={styles.pricing}>
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,21 +68,17 @@ export default function Pricing() {
           <p className={styles.subtitle}>Transparent packages with no hidden fees. Choose the commitment that feels right for you.</p>
         </motion.div>
 
-        <div className={styles.grid}>
-          {packages.map((pkg, i) => (
-            <motion.div 
+        <div className={styles.carouselWrapper}><div className={styles.track}>
+          {[...packages, ...packages].map((pkg, i) => (
+            <div
               key={i}
               className={`${styles.card} ${pkg.popular ? styles.popular : ""}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
             >
               {pkg.popular && <div className={styles.badge}>Most Popular</div>}
               <div className={styles.cardHeader}>
                 <h3 className={styles.pkgTitle}>{pkg.title}</h3>
                 <div className={styles.price}>{pkg.price}</div>
-                <div className={styles.perSession}>{pkg.perSession}</div>
+                <div className={styles.perSession}>{pkg.validity}</div>
               </div>
               <p className={styles.desc}>{pkg.desc}</p>
               <ul className={styles.features}>
@@ -74,12 +91,12 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href={`https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20purchase%20the%20${pkg.title}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
+              <a href={`https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20purchase%20the%20${encodeURIComponent(pkg.title)}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
                 Purchase via WhatsApp
               </a>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </div></div>
       </div>
     </section>
   );

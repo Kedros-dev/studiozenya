@@ -125,3 +125,59 @@
   background: var(--tan-deep);
   transform: translateY(-2px);
 }
+
+/* ── Stats bar ─────────────────────────────────────────── */
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 72px;
+  padding: 40px 48px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--espresso);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--stone);
+}
+
+.statDivider {
+  width: 1px;
+  height: 48px;
+  background: rgba(185, 149, 107, 0.3);
+}
+
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+  .statDivider {
+    width: 48px;
+    height: 1px;
+  }
+  .stat {
+    align-items: center;
+  }
+}

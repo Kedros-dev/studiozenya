@@ -6,15 +6,6 @@ export default function Testimonials() {
   return (
     <section className={styles.testimonials}>
       <div className={styles.container}>
-        <motion.h2 
-          className={styles.title}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Words from our <em>community</em>
-        </motion.h2>
-
         <div className={styles.grid}>
           {testimonials.map((t, i) => (
             <motion.div 

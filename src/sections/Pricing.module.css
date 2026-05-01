@@ -49,12 +49,29 @@
   line-height: 1.6;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+/* ── Auto-scroll carousel ──────────────────────────────── */
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 24px 0 8px;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+@keyframes scrollCards {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-304px * 7)); }
+}
+
+.track {
+  display: flex;
   gap: 24px;
-  max-width: 1240px;
-  margin: 0 auto;
+  width: max-content;
+  animation: scrollCards 28s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
 }
 
 .card {
@@ -67,6 +84,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  scroll-snap-align: start;
 }
 
 .card:hover {
