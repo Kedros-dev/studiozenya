@@ -30,8 +30,8 @@ export default function Hero() {
             src={slides[current]}
             alt="Studio Zenya"
             className={styles.bgImage}
-            initial={{ opacity: 0, scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
           />
