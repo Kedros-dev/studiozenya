@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Hero.module.css";
 
 const slides = [
-  "/assets/studio-photos/studio pic.jpeg",
   "/assets/studio-photos/studio-zenya-interior.jpeg",
   "/assets/studio-photos/1.jpeg",
   "/assets/studio-photos/2.jpeg",
