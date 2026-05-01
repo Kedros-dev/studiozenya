@@ -5,8 +5,7 @@ import Hero from "./sections/Hero";
 import Classes from "./sections/Classes";
 import Pricing from "./sections/Pricing";
 import Gallery from "./sections/Gallery";
-import FAQ from "./sections/FAQ";
-import Visit from "./sections/Visit";
+import FAQContact from "./sections/FAQContact";
 
 export default function App() {
   return (
@@ -17,8 +16,7 @@ export default function App() {
         <Classes />
         <Pricing />
         <Gallery />
-        <FAQ />
-        <Visit />
+        <FAQContact />
       </main>
       <Footer />
       <WhatsAppFAB />
