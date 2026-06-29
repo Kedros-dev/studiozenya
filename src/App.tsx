@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
+import BookingFAB from "./components/BookingFAB";
 import Hero from "./sections/Hero";
 import Classes from "./sections/Classes";
 import Pricing from "./sections/Pricing";
@@ -17,6 +18,7 @@ export default function App() {
         <FAQContact />
       </main>
       <Footer />
+      <BookingFAB />
       <WhatsAppFAB />
     </div>
   );

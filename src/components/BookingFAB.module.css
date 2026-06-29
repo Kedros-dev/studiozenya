@@ -1,0 +1,36 @@
+.fab {
+  position: fixed;
+  bottom: 108px;
+  right: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 0 20px 0 16px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(42, 33, 24, 0.35);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.fab:hover {
+  background: var(--tan-deep);
+}
+
+@media (max-width: 768px) {
+  .fab {
+    bottom: 96px;
+    right: 24px;
+    height: 46px;
+    font-size: 0.75rem;
+    padding: 0 16px 0 13px;
+    gap: 7px;
+  }
+}
