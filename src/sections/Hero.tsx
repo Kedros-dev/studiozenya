@@ -72,7 +72,7 @@ export default function Hero() {
             Book via WhatsApp
           </a>
           <a href="https://in.app.link/CLpOh4oky2b" target="_blank" rel="noreferrer" className={styles.secondaryBtn}>
-            Book Online
+            Book via IN2
           </a>
         </motion.div>
 

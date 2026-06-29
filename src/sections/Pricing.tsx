@@ -95,7 +95,7 @@ export default function Pricing() {
                 Purchase via WhatsApp
               </a>
               <a href="https://in.app.link/CLpOh4oky2b" target="_blank" rel="noreferrer" className={styles.buyOnline}>
-                or book online →
+                or book via IN2 →
               </a>
             </div>
           ))}

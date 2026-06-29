@@ -118,7 +118,7 @@ export default function Classes() {
           transition={{ duration: 0.7 }}
         >
           <h2 className={styles.title}>Weekly <em>Schedule</em></h2>
-          <p className={styles.subtitle}>All classes are 50 minutes. Tap any class to reserve via WhatsApp, or book online below.</p>
+          <p className={styles.subtitle}>All classes are 50 minutes. Tap any class to reserve via WhatsApp, or book via IN2 below.</p>
           <div className={styles.bookingBtns}>
             <a
               href="https://wa.me/96179077076"
@@ -135,7 +135,7 @@ export default function Classes() {
               rel="noreferrer"
               className={styles.bookOnline}
             >
-              Book Online →
+              Book via IN2 →
             </a>
           </div>
         </motion.div>
