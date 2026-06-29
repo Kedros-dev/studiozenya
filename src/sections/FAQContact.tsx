@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { faqs } from "../data/content";
+import { faqs, studioHours } from "../data/content";
 import styles from "./FAQContact.module.css";
 
 export default function FAQContact() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="visit" className={styles.section}>
+    <section id="faq" className={styles.section}>
       <div className={styles.container}>
 
         <div className={styles.grid}>
@@ -62,7 +62,12 @@ export default function FAQContact() {
               </div>
               <div className={styles.detailItem}>
                 <h4>Hours</h4>
-                <p>Mon–Fri: 7:00–21:00<br />Sat: 8:00–18:00<br />Sun: Closed</p>
+                {studioHours.map((h) => (
+                  <p key={h.days} className={styles.hoursRow}>
+                    <span className={styles.hoursDays}>{h.days}</span>
+                    <span className={styles.hoursTime}>{h.time}</span>
+                  </p>
+                ))}
               </div>
             </div>
 

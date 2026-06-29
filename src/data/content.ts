@@ -51,10 +51,16 @@ export const faqs = [
   },
   {
     question: "How do I book a class?",
-    answer: "All our bookings are handled personally via WhatsApp. Reach out to us, and we'll find the perfect class time for you."
+    answer: "You can book instantly online via IN2, or reach out to us on WhatsApp and we'll help you find the perfect class time for your level and schedule."
   },
   {
     question: "Do you have parking?",
     answer: "Yes, there is dedicated parking available right outside the studio in Mkalles."
   }
+];
+
+export const studioHours = [
+  { days: "Mon – Fri", time: "7:00 – 21:00" },
+  { days: "Saturday",  time: "8:00 – 18:00" },
+  { days: "Sunday",    time: "Closed" },
 ];

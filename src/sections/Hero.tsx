@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Hero.module.css";
 
 const slides = [
-  "/assets/studio-photos/studio-zenya-interior.jpeg",
-  "/assets/studio-photos/1.jpeg",
-  "/assets/studio-photos/2.jpeg",
-  "/assets/studio-photos/3.jpeg",
-  "/assets/studio-photos/4.jpeg",
-  "/assets/studio-photos/5.jpeg",
+  { src: "/assets/studio-photos/studio-zenya-interior.jpeg", alt: "Studio Zenya reformer room interior" },
+  { src: "/assets/studio-photos/1.jpeg", alt: "Pilates class in session at Studio Zenya" },
+  { src: "/assets/studio-photos/2.jpeg", alt: "Studio Zenya reformer equipment" },
+  { src: "/assets/studio-photos/3.jpeg", alt: "Instructor leading a Pilates session" },
+  { src: "/assets/studio-photos/4.jpeg", alt: "Studio Zenya class atmosphere" },
+  { src: "/assets/studio-photos/5.jpeg", alt: "Studio Zenya Mkalles Lebanon" },
 ];
 
 export default function Hero() {
@@ -27,8 +27,8 @@ export default function Hero() {
         <AnimatePresence mode="sync">
           <motion.img
             key={current}
-            src={slides[current]}
-            alt="Studio Zenya"
+            src={slides[current].src}
+            alt={slides[current].alt}
             className={styles.bgImage}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -46,7 +46,7 @@ export default function Hero() {
             key={i}
             className={`${styles.dot} ${i === current ? styles.dotActive : ""}`}
             onClick={() => setCurrent(i)}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={`View slide ${i + 1}`}
           />
         ))}
       </div>

@@ -49,8 +49,7 @@ export default function Banner() {
           >
             <a href="#classes" className={styles.dropLink} onClick={close}>Classes</a>
             <a href="#pricing" className={styles.dropLink} onClick={close}>Pricing</a>
-            <a href="#faq" className={styles.dropLink} onClick={close}>FAQ</a>
-            <a href="#visit" className={styles.dropLink} onClick={close}>Visit</a>
+            <a href="#faq" className={styles.dropLink} onClick={close}>FAQ & Contact</a>
             <a
               href="https://wa.me/96179077076"
               target="_blank"
