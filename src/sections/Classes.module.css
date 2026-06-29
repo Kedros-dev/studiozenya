@@ -33,6 +33,57 @@
   font-size: 1.05rem;
 }
 
+/* ── Booking CTA buttons ────────────────────────────────── */
+.bookingBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.bookWa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bookWa:hover {
+  background: var(--tan-deep);
+  transform: translateY(-2px);
+}
+
+.bookOnline {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--tan-deep);
+  border: 1.5px solid var(--tan-deep);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.bookOnline:hover {
+  background: var(--tan-deep);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
 /* ── Table wrapper ──────────────────────────────────────── */
 .tableWrap {
   overflow-x: auto;

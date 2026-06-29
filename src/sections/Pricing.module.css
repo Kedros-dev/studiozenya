@@ -256,6 +256,30 @@
   background: var(--tan-light);
 }
 
+.buyOnline {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--tan-deep);
+  letter-spacing: 0.04em;
+  transition: color 0.25s ease;
+}
+
+.buyOnline:hover {
+  color: var(--espresso);
+}
+
+.popular .buyOnline {
+  color: var(--tan-light);
+}
+
+.popular .buyOnline:hover {
+  color: var(--cream);
+}
+
 @media (max-width: 768px) {
   .pricing {
     padding: 80px 0;

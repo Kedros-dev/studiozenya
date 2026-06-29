@@ -94,6 +94,9 @@ export default function Pricing() {
               <a href={`https://wa.me/96179077076?text=Hi!%20I'd%20like%20to%20purchase%20the%20${encodeURIComponent(pkg.title)}%20package.`} target="_blank" rel="noreferrer" className={styles.buyBtn}>
                 Purchase via WhatsApp
               </a>
+              <a href="https://in.app.link/CLpOh4oky2b" target="_blank" rel="noreferrer" className={styles.buyOnline}>
+                or book online →
+              </a>
             </div>
           ))}
         </div></div>

@@ -69,10 +69,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a href="https://wa.me/96179077076?text=Hi!%20I'd%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noreferrer" className={styles.primaryBtn}>
-            Book a Free Trial
+            Book via WhatsApp
           </a>
-          <a href="#classes" className={styles.secondaryBtn}>
-            Explore Classes
+          <a href="https://in.app.link/CLpOh4oky2b" target="_blank" rel="noreferrer" className={styles.secondaryBtn}>
+            Book Online
           </a>
         </motion.div>
 
