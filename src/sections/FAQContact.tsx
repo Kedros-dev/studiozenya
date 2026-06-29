@@ -57,7 +57,8 @@ export default function FAQContact() {
             <div className={styles.details}>
               <div className={styles.detailItem}>
                 <h4>Location</h4>
-                <p>Mkalles, Lebanon<br />(VHJF+5Q2)</p>
+                <p>Mkalles, Lebanon</p>
+                <a href="https://maps.app.goo.gl/uQNV4NFMCSGrKcFW7" target="_blank" rel="noreferrer" className={styles.directionsLink}>Get Directions →</a>
               </div>
               <div className={styles.detailItem}>
                 <h4>Hours</h4>
@@ -71,7 +72,7 @@ export default function FAQContact() {
 
             <div className={styles.mapWrap}>
               <iframe
-                src="https://www.google.com/maps?q=Mkalles+Lebanon+VHJF%2B5Q2&output=embed"
+                src="https://maps.google.com/maps?q=Studio+Zenya+Mkalles+Lebanon&output=embed&z=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -7,7 +7,6 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.info}>
             <p>Mkalles, Lebanon</p>
-            <p>Mon–Fri: 7:00–21:00 &nbsp;·&nbsp; Sat: 8:00–18:00</p>
           </div>
 
           <a href="#" className={styles.logoWrap} aria-label="Studio Zenya home">
