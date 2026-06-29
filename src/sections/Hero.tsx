@@ -3,12 +3,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Hero.module.css";
 
 const slides = [
-  { src: "/assets/studio-photos/studio-zenya-interior.jpeg", alt: "Studio Zenya reformer room interior" },
-  { src: "/assets/studio-photos/1.jpeg", alt: "Pilates class in session at Studio Zenya" },
-  { src: "/assets/studio-photos/2.jpeg", alt: "Studio Zenya reformer equipment" },
-  { src: "/assets/studio-photos/3.jpeg", alt: "Instructor leading a Pilates session" },
-  { src: "/assets/studio-photos/4.jpeg", alt: "Studio Zenya class atmosphere" },
-  { src: "/assets/studio-photos/5.jpeg", alt: "Studio Zenya Mkalles Lebanon" },
+  { src: "/assets/studio-photos/IMG_6667.jpeg", alt: "Studio Zenya Pilates studio interior" },
+  { src: "/assets/studio-photos/IMG_6668.jpeg", alt: "Reformer equipment at Studio Zenya" },
+  { src: "/assets/studio-photos/IMG_6669.jpeg", alt: "Studio Zenya class in session" },
+  { src: "/assets/studio-photos/IMG_6670.jpeg", alt: "Pilates reformers at Studio Zenya Mkalles" },
+  { src: "/assets/studio-photos/IMG_6672.jpeg", alt: "Studio Zenya training session" },
+  { src: "/assets/studio-photos/IMG_6673.jpeg", alt: "Studio Zenya atmosphere" },
+  { src: "/assets/studio-photos/IMG_6674.jpeg", alt: "Pilates class at Studio Zenya" },
+  { src: "/assets/studio-photos/IMG_6675.jpeg", alt: "Studio Zenya reformer room" },
+  { src: "/assets/studio-photos/IMG_6676.jpeg", alt: "Studio Zenya Lebanon" },
+  { src: "/assets/studio-photos/IMG_6678.jpeg", alt: "Pilates session at Studio Zenya" },
+  { src: "/assets/studio-photos/IMG_6679.jpeg", alt: "Studio Zenya workout space" },
+  { src: "/assets/studio-photos/IMG_6680.jpeg", alt: "Studio Zenya equipment detail" },
+  { src: "/assets/studio-photos/IMG_6681.jpeg", alt: "Studio Zenya class atmosphere" },
+  { src: "/assets/studio-photos/IMG_6682.jpeg", alt: "Reformer Pilates at Studio Zenya" },
+  { src: "/assets/studio-photos/IMG_6684.jpeg", alt: "Studio Zenya Mkalles interior" },
+  { src: "/assets/studio-photos/IMG_6685.jpeg", alt: "Pilates studio Studio Zenya" },
+  { src: "/assets/studio-photos/IMG_6686.jpeg", alt: "Studio Zenya training space" },
+  { src: "/assets/studio-photos/IMG_6687.jpeg", alt: "Studio Zenya reformer detail" },
+  { src: "/assets/studio-photos/IMG_6688.jpeg", alt: "Studio Zenya Pilates Mkalles Lebanon" },
 ];
 
 export default function Hero() {
