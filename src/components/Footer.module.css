@@ -106,6 +106,9 @@
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
   .top {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -114,5 +117,8 @@
   }
   .contact {
     text-align: center;
+  }
+  .socials {
+    justify-content: center;
   }
 }

@@ -251,9 +251,33 @@
   letter-spacing: 0.04em;
 }
 
+@media (max-width: 768px) {
+  .classes {
+    padding: 72px 0 80px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 600px) {
+  .classes {
+    padding: 64px 0 72px;
+  }
+  .container {
+    padding: 0 16px;
+  }
   .legend {
     gap: 14px 24px;
     padding: 18px 16px;
+  }
+  .bookingBtns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bookWa,
+  .bookOnline {
+    justify-content: center;
+    text-align: center;
   }
 }
