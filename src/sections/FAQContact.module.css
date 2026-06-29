@@ -146,6 +146,25 @@
   margin-bottom: 32px;
 }
 
+.waBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  background: #25D366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: background 0.25s ease;
+}
+
+.waBtn:hover {
+  background: #1ebe5d;
+}
+
 .callBtn {
   display: inline-block;
   padding: 14px 28px;
