@@ -4,6 +4,7 @@ dist-ssr
 .cache
 .upm
 .pythonlibs
+attached_assets
 *.local
 .DS_Store
 .env
