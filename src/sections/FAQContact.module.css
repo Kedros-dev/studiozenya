@@ -139,9 +139,16 @@
   color: var(--espresso);
 }
 
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
 .callBtn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 28px;
   border-radius: var(--radius-md);
   border: 1.5px solid var(--espresso);
   color: var(--espresso);
@@ -150,13 +157,28 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   transition: background 0.25s ease, color 0.25s ease;
-  margin-bottom: 32px;
-  align-self: flex-start;
 }
 
 .callBtn:hover {
   background: var(--espresso);
   color: var(--cream);
+}
+
+.in2Btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  background: var(--espresso);
+  color: var(--cream);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: background 0.25s ease;
+}
+
+.in2Btn:hover {
+  background: var(--tan-deep);
 }
 
 .mapWrap {

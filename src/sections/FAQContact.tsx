@@ -66,9 +66,14 @@ export default function FAQContact() {
               </div>
             </div>
 
-            <a href="tel:+96179077076" className={styles.callBtn}>
-              Call +961 79 077 076
-            </a>
+            <div className={styles.ctaGroup}>
+              <a href="tel:+96179077076" className={styles.callBtn}>
+                Call +961 79 077 076
+              </a>
+              <a href="https://in.app.link/CLpOh4oky2b" target="_blank" rel="noreferrer" className={styles.in2Btn}>
+                Book via IN2
+              </a>
+            </div>
 
             <div className={styles.mapWrap}>
               <iframe
