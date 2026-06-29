@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Hero.module.css";
 
@@ -26,13 +26,32 @@ const slides = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const [loaded, setLoaded] = useState<Set<number>>(new Set([0]));
+
+  // Preload every image as soon as the component mounts
+  useEffect(() => {
+    slides.forEach((slide, i) => {
+      const img = new Image();
+      img.src = slide.src;
+      img.onload = () => setLoaded((prev) => new Set(prev).add(i));
+    });
+  }, []);
+
+  const advance = useCallback(() => {
+    setCurrent((prev) => {
+      // Find the next slide that is already loaded; skip unloaded ones
+      for (let step = 1; step <= slides.length; step++) {
+        const next = (prev + step) % slides.length;
+        if (loaded.has(next)) return next;
+      }
+      return prev; // stay on current if nothing else is ready
+    });
+  }, [loaded]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    const timer = setInterval(advance, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [advance]);
 
   return (
     <section className={styles.hero}>
@@ -58,7 +77,7 @@ export default function Hero() {
           <button
             key={i}
             className={`${styles.dot} ${i === current ? styles.dotActive : ""}`}
-            onClick={() => setCurrent(i)}
+            onClick={() => loaded.has(i) && setCurrent(i)}
             aria-label={`View slide ${i + 1}`}
           />
         ))}
