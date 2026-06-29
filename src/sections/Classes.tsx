@@ -143,7 +143,7 @@ export default function Classes() {
                   <div key={ci} className={styles.slotCell}>
                     {slot ? (
                       <a
-                        href={`https://wa.me/96171511101?text=Hi!%20I'd%20like%20to%20book%20the%20${encodeURIComponent(slot.name)}%20class%20at%20${row.time}.`}
+                        href={`https://wa.me/96179077076?text=Hi!%20I'd%20like%20to%20book%20the%20${encodeURIComponent(slot.name)}%20class%20at%20${row.time}.`}
                         target="_blank"
                         rel="noreferrer"
                         className={`${styles.pill} ${styles[classType(slot.name)]}`}
