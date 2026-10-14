@@ -105,6 +105,20 @@
   color: var(--stone);
 }
 
+.credit {
+  margin-top: 6px;
+}
+
+.credit a {
+  color: var(--cream);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.credit a:hover {
+  color: var(--tan-light);
+}
+
 @media (max-width: 640px) {
   .container {
     padding: 0 20px;

@@ -34,6 +34,9 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} Studio Zenya. All rights reserved.</p>
+          <p className={styles.credit}>
+            Website by <a href="https://kedros.dev" target="_blank" rel="noreferrer">kedros.dev</a>
+          </p>
         </div>
       </div>
     </footer>
